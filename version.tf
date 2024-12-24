@@ -36,15 +36,3 @@ provider "azurerm" {
   use_oidc = true
   features {}
 }
-provider "azapi" {
-}
-provider "azuread" {
-}
-provider "random" {
-}
-provider "null" {
-}
-provider "time" {
-}
-provider "azuredevops" {
-}
