@@ -39,10 +39,10 @@ jobs:
       - name: Terraform Init
         id: tf-init
         env:
-          TF_VAR_resource_group_name: ${{ secrets.TF_BACKEND_RG_NAME }}
-          TF_VAR_storage_account_name: ${{ secrets.TF_BACKEND_STORAGE_ACCOUNT_NAME }}
-          TF_VAR_container_name: ${{ secrets.TF_BACKEND_CONTAINER_NAME }}
-          TF_VAR_key: ${{ secrets.TF_BACKEND_STATE_FILE_NAME }}
+          TF_VAR_resource_group_name: ${{ vars.TF_BACKEND_RG_NAME }}
+          TF_VAR_storage_account_name: ${{ vars.TF_BACKEND_STORAGE_ACCOUNT_NAME }}
+          TF_VAR_container_name: ${{ vars.TF_BACKEND_CONTAINER_NAME }}
+          TF_VAR_key: ${{ vars.TF_BACKEND_STATE_FILE_NAME }}
         run: terraform init
       
       - name: Terraform Validate
